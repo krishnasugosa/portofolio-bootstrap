@@ -1,0 +1,396 @@
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container-XXL{
+    max-width: 2000px;
+}
+
+.nav{
+    background-color: rgba(0, 73, 128, 0.395);
+    padding: 5px;
+}
+
+.nav-link{
+    color: black;
+    font-size: clamp(12px,3vw,18px);
+    font-family: 'Press Start 2P','system ui';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link:hover{
+    color: rgb(14, 46, 125);
+}
+
+#Openbtn{
+    display: none;
+    border: none;
+    outline: none;
+    font-size: clamp(5px,5vw,5px);
+    font-family: 'Press Start 2P','system ui';
+    
+    background-color: transparent;
+}
+
+#Closebtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: clamp(20px,10vw,30px);
+    font-family: 'Press Start 2P','system ui';
+    display: none;
+}
+
+/*hamburger*/
+@media screen and (max-width:600px){
+    nav{
+        background-color: rgba(0, 73, 128, 0.395);
+        padding: 10px;
+    }
+    .nav{
+        background-color: rgb(61, 187, 229);
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100em);
+    }
+    #Closebtn{
+        display: block;
+        position: relative;
+        top: -40%;
+        left: 50%;
+    }
+    #Openbtn{
+        display: block;
+    }
+
+    .show{
+        transform: translateX(0em);
+        transition: 1s ease;
+    }
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    background-color:  rgb(14, 46, 125);
+    width: 0;
+    height: 4px;
+    transition: .3s ease;
+    margin-top: 40px;
+    margin-left: -5px;
+}
+
+a:hover::after{
+    width: clamp(75px,20vw,110px);
+}
+
+.position-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.position-images h2{
+    font-size: clamp(10px,4vw,30px);
+}
+
+.images-border{
+    display: flex;
+    place-content: center;
+    border: 5px solid black;
+    background-image: url('itachi.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: clamp(100px,30vw,300px);
+    height: clamp(100px,30vw,300px);
+    transition: .2s ease ;
+}
+
+.images-border::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 0px 10px black;
+    width: clamp(10px,2vw,10px);
+    height: clamp(10px,2vw,10px);
+    border-radius: 16px;
+    margin-top: clamp(-7px,5vw,-20px);
+    position: relative;
+    animation: animateBorder 5s infinite ease ;
+}
+
+.images-border:hover{
+    box-shadow: 0px 0px 10px rgb(21, 21, 21);
+   
+}
+
+.container-1{
+    background-color: rgb(46, 60, 73);
+    font-family: 'Press Start 2P' , 'system ui';
+    color: white;
+}
+
+.container-2{
+    background-color: rgb(28, 29, 29);
+    padding: 30px;
+}
+
+.table{
+    font-size: clamp(2px,2vw,25px);
+    font-family: 'Press Start 2P' , 'system ui';
+}
+
+.container-3{
+    background-color: rgb(6, 10, 21);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Press Start 2P' , 'system ui';
+}
+
+.progress{
+    margin: 10px;
+    background-color: rgba(18, 18, 88, 0.682);
+    height: 30px;
+}
+
+.progress-bar{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: black;
+}
+
+.container-5{
+    padding: 20px;
+    background-color: rgb(8, 6, 21);
+}
+
+.container-5 h1{
+    font-size: clamp(15px,4vw,35px);
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P','system ui';
+}
+
+.frame-photo{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame1{
+    background-image: url('animal1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: clamp(300px,50vw,700px);
+    height: clamp(300px,50vw,700px);
+}
+
+.frame2{
+    background-image: url('animal2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: clamp(300px,50vw,700px);
+    height: clamp(300px,50vw,700px);
+}
+
+.frame3{
+    background-image: url('animal3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: clamp(300px,50vw,700px);
+    height: clamp(300px,50vw,700px);
+}
+
+.container-6{
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-6 h2{
+    color: white;
+    font-family: 'Press Start 2P','system ui';
+    text-align: center;
+    font-size: clamp(15px,5vw,30px);
+}
+
+.wrapper-input{
+    border: 3px solid white;
+    padding: 25px;
+}
+
+.inner-input{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#txt1,#txt2{
+    outline: transparent;
+    color: white;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+}
+
+#submitbtn{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    transition: .3s ease;
+}
+
+#submitbtn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px white;
+}
+
+input{
+    font-family: 'Press Start 2P','system ui';
+    margin: 10px;
+    width: clamp(200px,25vw,300px);
+}
+
+@keyframes animateBorder{
+    0%{
+       margin-left: 0;
+    }
+    30%{
+        margin-top: clamp(-7px,5vw,-20px);
+        margin-left: clamp(80px,10vw,250px);
+    }
+    80%{
+        margin-top: clamp(-7px,5vw,-20px);
+        margin-left: clamp(-90px,10vw,-300px) ;
+    }
+    100%{
+        margin-top: clamp(-7px,5vw,-20px);
+    }
+
+}
+
+@media screen and (min-width:2000px){
+    .wrapper-container{
+        display: grid;
+        place-content: center;
+    }
+}
+
+@media screen and (max-width:500px){
+    .wrapper-input{
+        border: transparent;
+    }
+}
+
+/*game section*/
+.container-4{
+    background-color: rgb(1, 1, 28);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Press Start 2P','system ui';
+}
+
+.container-4 h1{
+    color: white;
+    font-size: clamp(20px,3vw,35px);
+}
+
+.position-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position-btn{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position-btn button{
+    margin: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+#wrapper{
+    background-image: url('pixel-beach.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid white;
+    width: clamp(200px,40vw,500px);
+    height: clamp(200px,40vw,300px);
+    overflow: hidden;
+}
+
+#karakter{
+    background-image: url('skull1.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: clamp(45px,5vw,75px);
+    height: clamp(45px,5vw,75px);
+    position: relative;
+    top: 75%;
+}
+
+@media screen and (max-width:325px){
+    .frame1{
+        background-image: url('animal1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width:  clamp(150px,50vw,300px);
+        height:  clamp(150px,50vw,300px);
+    }
+    .frame2{
+        background-image: url('animal2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width:  clamp(150px,50vw,300px);
+        height:  clamp(150px,50vw,300px);
+    }
+    .frame3{
+        background-image: url('animal3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: clamp(150px,50vw,300px);
+        height: clamp(150px,50vw,300px);
+    }
+}

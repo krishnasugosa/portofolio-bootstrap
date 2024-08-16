@@ -38,21 +38,27 @@ const navbar = document.querySelector('.nav');
 const NavLinks1 = document.querySelector('.nav-links1');
 const NavLinks2 = document.querySelector('.nav-links2');
 const NavLinks3 = document.querySelector('.nav-links3');
+const body = document.querySelector('body');
 OpenBtn.addEventListener('click',()=>{
     navbar.classList.add('show');
+    body.classList.add('Turnofthescroll');
 });
 Closebtn.addEventListener('click',()=>{
     navbar.classList.remove('show');
+    body.classList.remove('Turnofthescroll');
 });
 
 NavLinks1.addEventListener('click',()=>{
     navbar.classList.remove('show');
+    body.classList.remove('Turnofthescroll');
 });
 
 NavLinks2.addEventListener('click',()=>{
     navbar.classList.remove('show');
+    body.classList.remove('Turnofthescroll');
 });
 
 NavLinks3.addEventListener('click',()=>{
     navbar.classList.remove('show');
+    body.classList.remove('Turnofthescroll');
 });

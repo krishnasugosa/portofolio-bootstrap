@@ -61,6 +61,7 @@ body{
         flex-direction: column;
         align-items: center;
         transform: translateX(-100em);
+         transition: 1s ease;
     }
     #Closebtn{
         display: block;
@@ -74,7 +75,9 @@ body{
 
     .show{
         transform: translateX(0em);
-        transition: 1s ease;
+    }
+    .Turnofthescroll{
+        overflow-y: hidden;
     }
 }
 
